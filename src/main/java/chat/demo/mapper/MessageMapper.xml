@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="chat.demo.mapper.MessageMapper">
+<!--    <resultMap id="Messages"  type="chat.demo.entity.Message">-->
+<!--        <collection property="friends" javaType="list"  resultMap="socket.dao.FriendMapper.Friend_User_Map">-->
+<!--        </collection>-->
+<!--    </resultMap>-->
+    <select id="getMessage" parameterType="java.lang.String" resultType="chat.demo.entity.Message">
+        select * from Message where userId=#{userId}
+    </select>
+
+</mapper>
